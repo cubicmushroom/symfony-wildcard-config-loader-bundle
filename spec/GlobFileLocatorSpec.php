@@ -1,8 +1,8 @@
 <?php
 
-namespace spec\CubicMushroom\Symfony\WildcardConfigLoader;
+namespace spec\CubicMushroom\Symfony\WildcardConfigLoaderBundle;
 
-use CubicMushroom\Symfony\WildcardConfigLoader\GlobFileLocator;
+use CubicMushroom\Symfony\WildcardConfigLoaderBundle\GlobFileLocator;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Symfony\Component\Config\FileLocator;
@@ -10,9 +10,9 @@ use Symfony\Component\Config\FileLocator;
 /**
  * Class GlobFileLocatorSpec
  *
- * @package CubicMushroom\Symfony\WildcardConfigLoader
+ * @package CubicMushroom\Symfony\WildcardConfigLoaderBundle
  *
- * @see     \CubicMushroom\Symfony\WildcardConfigLoader\GlobFileLocator
+ * @see     \CubicMushroom\Symfony\WildcardConfigLoaderBundle\GlobFileLocator
  */
 class GlobFileLocatorSpec extends ObjectBehavior
 {
@@ -30,6 +30,7 @@ class GlobFileLocatorSpec extends ObjectBehavior
 
         $testClientFilePath = realpath(__DIR__ . '/../test_files/clients');
 
+        /** @noinspection PhpUndefinedMethodInspection */
         $this->locate('clients/*', __DIR__ . '/../test_files', false)->shouldReturn(
             [
                 $testClientFilePath . '/123.yml',
@@ -45,6 +46,7 @@ class GlobFileLocatorSpec extends ObjectBehavior
 
         $testClientFile = realpath(__DIR__ . '/../test_files/clients/123.yml');
 
+        /** @noinspection PhpUndefinedMethodInspection */
         $this->locate($testClientFile)->shouldReturn($testClientFile);
     }
 }

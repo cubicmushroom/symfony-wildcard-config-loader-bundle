@@ -1,15 +1,15 @@
 <?php
 
-namespace CubicMushroom\Symfony\WildcardConfigLoader;
+namespace CubicMushroom\Symfony\WildcardConfigLoaderBundle;
 
 use Symfony\Component\Config\FileLocator;
 
 /**
  * Class GlobFileLocator
  *
- * @package CubicMushroom\Symfony\WildcardConfigLoader
+ * @package CubicMushroom\Symfony\WildcardConfigLoaderBundle
  *
- * @see     \spec\CubicMushroom\Symfony\WildcardConfigLoader\GlobFileLocatorSpec for spec
+ * @see     \spec\CubicMushroom\Symfony\WildcardConfigLoaderBundle\GlobFileLocatorSpec for spec
  */
 class GlobFileLocator extends FileLocator
 {

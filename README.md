@@ -8,13 +8,13 @@ Usage
 -----
 
 To use the config loader, you need to update your AppKernel to add a new instance of 
-\CubicMushroom\Symfony\WildcardConfigLoader\ConfigLoader as a config loader by overriding the 
+\CubicMushroom\Symfony\WildcardConfigLoaderBundle\ConfigLoader as a config loader by overriding the 
 AppKernel::getContainerLoader() method as follows...
 
 
 ````
-use CubicMushroom\Symfony\WildcardConfigLoader\ConfigLoader;
-use CubicMushroom\Symfony\WildcardConfigLoader\GlobFileLocator;
+use CubicMushroom\Symfony\WildcardConfigLoaderBundle\ConfigLoader;
+use CubicMushroom\Symfony\WildcardConfigLoaderBundle\GlobFileLocator;
 use Symfony\Component\Config\Loader\LoaderResolver;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 

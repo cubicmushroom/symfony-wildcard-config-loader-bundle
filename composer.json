@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "CubicMushroom\\Symfony\\WildcardConfigLoader\\": "src//"
+            "CubicMushroom\\Symfony\\WildcardConfigLoaderBundle\\": "src//"
         }
     }
 }
