@@ -1,0 +1,5 @@
+---
+test:
+  array:
+    of: variables
+    with: items
