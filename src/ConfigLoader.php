@@ -48,7 +48,19 @@ class ConfigLoader extends FileLoader
         $yamlParser = new Parser();
 
         $result = $yamlParser->parse(file_get_contents($path));
+        $this->setParameters($result);
+    }
 
+
+    /**
+     * Takes an array, read from config file and processes it
+     *
+     * This method can be overridden in child classes in order to store the config differently
+     *
+     * @param array $result
+     */
+    protected function setParameters(array $result)
+    {
         $parameters = $this->extractParameters((array)$result);
 
         foreach ($parameters as $key => $value) {
