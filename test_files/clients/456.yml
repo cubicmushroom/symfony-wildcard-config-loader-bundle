@@ -1,0 +1,5 @@
+---
+another_test:
+ another_array:
+    of: variables
+    with: items
