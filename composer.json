@@ -1,0 +1,19 @@
+{
+    "name": "cubicmushroom-symfony/wildcard-config-loader-bundle",
+    "description": "Symfony bundle to include config files using wildcard patterns",
+    "type": "library",
+    "require": {
+        "symfony/symfony": "~2.7"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^2.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Toby Griffiths",
+            "email": "toby@cubicmushroom.co.uk"
+        }
+    ],
+    "minimum-stability": "stable"
+}
