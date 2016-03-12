@@ -1,0 +1,24 @@
+{
+  "name": "cm-symfony-wildcard-config-loader-bundle",
+  "version": "0.0.0",
+  "description": "Symfony bundle to include config files using wildcard patterns",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cubicmushroom/symfony-wildcard-config-loader-bundle.git"
+  },
+  "keywords": [
+    "symfony",
+    "config",
+    "wildcard"
+  ],
+  "author": "Toby Griffiths <toby@cubicmushroom.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cubicmushroom/symfony-wildcard-config-loader-bundle/issues"
+  },
+  "homepage": "https://github.com/cubicmushroom/symfony-wildcard-config-loader-bundle#readme"
+}
