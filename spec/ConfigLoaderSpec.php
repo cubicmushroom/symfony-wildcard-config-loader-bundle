@@ -15,7 +15,7 @@ use Symfony\Component\DependencyInjection\Loader\FileLoader;
  *
  * @package CubicMushroom\Symfony\WildcardConfigLoader
  *
- * @see \CubicMushroom\Symfony\WildcardConfigLoader\ConfigLoader
+ * @see     \CubicMushroom\Symfony\WildcardConfigLoader\ConfigLoader
  */
 class ConfigLoaderSpec extends ObjectBehavior
 {
@@ -33,8 +33,8 @@ class ConfigLoaderSpec extends ObjectBehavior
         /** @noinspection PhpUndefinedMethodInspection */
         $this->shouldBeAnInstanceOf(FileLoader::class);
     }
-    
-    
+
+
     function it_should_support_paths_with_asterisks_in()
     {
         /** @var self|ConfigLoader $this */
@@ -58,7 +58,7 @@ class ConfigLoaderSpec extends ObjectBehavior
         /** @var self|ConfigLoader $this */
 
         $filePath = 'clients/123.yml';
-        $fullPath = __DIR__.'/../test_files/123.yml';
+        $fullPath = __DIR__ . '/../test_files/clients/123.yml';
 
         /** @noinspection PhpUndefinedMethodInspection */
         $locator->locate($filePath)->willReturn($fullPath);
@@ -66,9 +66,39 @@ class ConfigLoaderSpec extends ObjectBehavior
         $this->load($filePath, 'yml');
 
         $container->addResource(new FileResource($fullPath));
-        /** @noinspection PhpVoidFunctionResultUsedInspection */ /** @noinspection PhpUndefinedMethodInspection */
+        /** @noinspection PhpVoidFunctionResultUsedInspection */
+        /** @noinspection PhpUndefinedMethodInspection */
+        $container->setParameter(
+            'test',
+            [
+                'array' => [
+                    'of'   => 'variables',
+                    'with' => 'items',
+                ],
+            ]
+        )->shouldHaveBeenCalled();
+    }
+
+
+    function it_should_set_parameters_as_flat_entries(ContainerBuilder $container, FileLocatorInterface $locator)
+    {
+        /** @var self|ConfigLoader $this */
+
+        $filePath = 'clients/123.yml';
+        $fullPath = __DIR__ . '/../test_files/clients/123.yml';
+
+        /** @noinspection PhpUndefinedMethodInspection */
+        $locator->locate($filePath)->willReturn($fullPath);
+
+        $this->setParameterOutput(ConfigLoader::PARAMETER_TYPE_FLAT);
+        $this->load($filePath, 'yml');
+
+        $container->addResource(new FileResource($fullPath));
+        /** @noinspection PhpVoidFunctionResultUsedInspection */
+        /** @noinspection PhpUndefinedMethodInspection */
         $container->setParameter('test.array.of', 'variables')->shouldHaveBeenCalled();
-        /** @noinspection PhpVoidFunctionResultUsedInspection */ /** @noinspection PhpUndefinedMethodInspection */
+        /** @noinspection PhpVoidFunctionResultUsedInspection */
+        /** @noinspection PhpUndefinedMethodInspection */
         $container->setParameter('test.array.with', 'items')->shouldHaveBeenCalled();
     }
 }
