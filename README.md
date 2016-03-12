@@ -77,8 +77,7 @@ files the class handles, simply extends the class and override the supports() me
 Config values
 -------------
 
-Config values found in the files will be stored in parameters with '.'s separating each array key.  For example, yml
-config file content like this...
+Config values found in the files will be stored in array parameters.  For example, yml config file content like this...
 
 ````
 client:
@@ -90,6 +89,20 @@ client:
 ````
 
 ... would translate to the following parameters...
+
+````
+client = [
+    'here' => [
+        'this' => 123,
+        'that' => 456,
+    ],
+    'something' => 'else',
+]
+````
+
+
+This is using the details ConfigLoader::PARAMETER_TYPE_ARRAY option.  You can change this if you prefer flat parameter, 
+by calling the `setParameterOutput()` method with `ConfigLoader::FLAT` as the only argument. 
 
 ````
 client.here.this = 123
