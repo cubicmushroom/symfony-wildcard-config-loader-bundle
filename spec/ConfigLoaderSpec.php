@@ -58,7 +58,7 @@ class ConfigLoaderSpec extends ObjectBehavior
         /** @var self|ConfigLoader $this */
 
         $filePath = 'clients/123.yml';
-        $fullPath = __DIR__.'/../test_files/123.yml';
+        $fullPath = __DIR__ . '/../test_files/clients/123.yml';
 
         /** @noinspection PhpUndefinedMethodInspection */
         $locator->locate($filePath)->willReturn($fullPath);
