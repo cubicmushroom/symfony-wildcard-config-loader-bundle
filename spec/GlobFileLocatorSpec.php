@@ -37,4 +37,14 @@ class GlobFileLocatorSpec extends ObjectBehavior
             ]
         );
     }
+
+
+    function it_should_handle_absolute_paths()
+    {
+        /** @var self|GlobFileLocator $this */
+
+        $testClientFile = realpath(__DIR__ . '/../test_files/clients/123.yml');
+
+        $this->locate($testClientFile)->shouldReturn($testClientFile);
+    }
 }
