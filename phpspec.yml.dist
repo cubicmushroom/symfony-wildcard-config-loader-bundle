@@ -1,0 +1,5 @@
+---
+suites:
+  default:
+    namespace: CubicMushroom\Symfony\WildcardConfigLoader
+    psr4_prefix: CubicMushroom\Symfony\WildcardConfigLoader
