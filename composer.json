@@ -20,5 +20,8 @@
         "psr-4": {
             "CubicMushroom\\Symfony\\WildcardConfigLoader\\": "src//"
         }
+    },
+    "config": {
+        "bin-dir": "bin"
     }
 }
