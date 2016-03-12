@@ -1,6 +1,7 @@
 {
     "name": "cubicmushroom-symfony/wildcard-config-loader-bundle",
     "description": "Symfony bundle to include config files using wildcard patterns",
+    "version": "1.0.0",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -18,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "CubicMushroom\\Symfony\\WildcardConfigLoader\\": "src//"
+            "CubicMushroom\\Symfony\\WildcardConfigLoaderBundle\\": "src//"
         }
     }
 }

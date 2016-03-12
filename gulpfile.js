@@ -6,7 +6,7 @@ var phpspecTasks = require('gulp-cm-phpspec-tasks');
 
 var versionFiles = ['composer.json', 'package.json'];
 
-phpspecTasks.addTasks(gulp, 'CubicMushroom/Symfony/WildcardConfigLoader/', {bin: 'vendor/bin/phpspec'});
+phpspecTasks.addTasks(gulp, 'CubicMushroom/Symfony/WildcardConfigLoaderBundle/', {bin: 'vendor/bin/phpspec'});
 
 
 // -----------------------------------------------------------------------------------------------------------------

@@ -1,8 +1,8 @@
 <?php
 
-namespace spec\CubicMushroom\Symfony\WildcardConfigLoader;
+namespace spec\CubicMushroom\Symfony\WildcardConfigLoaderBundle;
 
-use CubicMushroom\Symfony\WildcardConfigLoader\ConfigLoader;
+use CubicMushroom\Symfony\WildcardConfigLoaderBundle\ConfigLoader;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Symfony\Component\Config\FileLocatorInterface;
@@ -13,9 +13,9 @@ use Symfony\Component\DependencyInjection\Loader\FileLoader;
 /**
  * Class ConfigLoaderSpec
  *
- * @package CubicMushroom\Symfony\WildcardConfigLoader
+ * @package CubicMushroom\Symfony\WildcardConfigLoaderBundle
  *
- * @see     \CubicMushroom\Symfony\WildcardConfigLoader\ConfigLoader
+ * @see     \CubicMushroom\Symfony\WildcardConfigLoaderBundle\ConfigLoader
  */
 class ConfigLoaderSpec extends ObjectBehavior
 {

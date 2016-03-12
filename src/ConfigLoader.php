@@ -1,6 +1,6 @@
 <?php
 
-namespace CubicMushroom\Symfony\WildcardConfigLoader;
+namespace CubicMushroom\Symfony\WildcardConfigLoaderBundle;
 
 use Symfony\Component\Config\FileLocatorInterface;
 use Symfony\Component\Config\Resource\FileResource;
@@ -13,9 +13,9 @@ use Symfony\Component\Yaml\Parser;
 /**
  * Class ConfigLoader
  *
- * @package CubicMushroom\Symfony\WildcardConfigLoader
+ * @package CubicMushroom\Symfony\WildcardConfigLoaderBundle
  *
- * @see     \spec\CubicMushroom\Symfony\WildcardConfigLoader\ConfigLoaderSpec for spec
+ * @see     \spec\CubicMushroom\Symfony\WildcardConfigLoaderBundle\ConfigLoaderSpec for spec
  */
 class ConfigLoader extends FileLoader
 {

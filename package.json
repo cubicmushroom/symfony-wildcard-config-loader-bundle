@@ -1,6 +1,6 @@
 {
   "name": "cm-symfony-wildcard-config-loader-bundle",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Symfony bundle to include config files using wildcard patterns",
   "main": "gulpfile.js",
   "scripts": {
